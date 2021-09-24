@@ -111,50 +111,97 @@
 
 // function tupla2Param2(...params: [number, string, boolean]) {
 //   // console.log(Array.isArray(params));
-//   console.log(`2) ${params[0]} ${params[1]} ${params[2]}`);
+//      console.log(`2) ${params[0]} ${params[1]} ${params[2]}`);
 // }
 
 // tupla2Param2(...tupla);
 
 //Destructuring (array)
 
-const caracteristicas = ["Motor Zetec 1.8", 2020];
-// const motor = caracteristicas[0];
-// const ano = caracteristicas[1];
+// const caracteristicas = ["Motor Zetec 1.8", 2020];
+// // const motor = caracteristicas[0];
+// // const ano = caracteristicas[1];
 
-const [motor, ano] = caracteristicas;
-console.log(motor);
-console.log(ano);
+// const [motor, ano] = caracteristicas;
+// console.log(motor);
+// console.log(ano);
 
-//Destructuring (objeto)
-const item = {
-  nome: "SSD 480GB",
-  preco: 200,
-  caracteristicas: {
-    w: "Importado",
-  },
-};
+// //Destructuring (objeto)
+// const item = {
+//   nome: "SSD 480GB",
+//   preco: 200,
+//   caracteristicas: {
+//     w: "Importado",
+//   },
+// };
 
-const nomeItem = item.nome;
-const precoItem = item.preco;
+// const nomeItem = item.nome;
+// const precoItem = item.preco;
 
-console.log(nomeItem);
-console.log(precoItem);
+// console.log(nomeItem);
+// console.log(precoItem);
 
-const {
-  nome: n,
-  preco: p,
-  caracteristicas: { w },
-} = item;
-console.log(n);
-console.log(p);
-console.log(w);
+// const {
+//   nome: n,
+//   preco: p,
+//   caracteristicas: { w },
+// } = item;
+// console.log(n);
+// console.log(p);
+// console.log(w);
 
-//Template string
+// //Template string
 
-const usuarioID = "SuporteCord3r";
-const notificacoes: string = "9";
-// const boasVindas =
-//   "Boas Vindas " + usuarioID + " você tem " + notificacoes + " notificações";
-const boasVindas = `Boas vindas ${usuarioID} você tem ${notificacoes} notificações`;
-console.log(boasVindas);
+// const usuarioID = "SuporteCord3r";
+// const notificacoes: string = "10";
+// // const boasVindas =
+// //   "Boas Vindas " + usuarioID + " você tem " + notificacoes + " notificações";
+// const boasVindas = `
+//     Boas vindas ${usuarioID},
+//     Notificações: ${parseInt(notificacoes) > 9 ? "+9" : notificacoes}
+// `;
+// console.log(boasVindas);
+// console.log(`${1 + 1 * 30}`);
+
+// // Exercicio 1 - Abaixo temos um código em JavaScript. "Traduza-o" para TypeScript!
+
+// const dobro = (valor: number): number => valor * 2;
+// console.log(dobro(10));
+
+// //Exercicio 2 - Verifique se há espaço para melhorias nesse trecho de código!
+
+// const dizerOla = function (nome: string = "Pessoa") {
+//   console.log("Ola, " + nome);
+// };
+// dizerOla();
+// dizerOla("Anna");
+
+// //Exercicio 3 -  Dado esse array, imprima o menor valor!
+// const nums = [-3, 33, 38, 5];
+
+// console.log(Math.min(...nums));
+
+// //Exercicio 4 - Adicione os elementos de nums em array !
+// const array = [55, 20];
+// array.push(...nums);
+// console.log(array);
+
+// // Exercício 5 - Simplifique os trechos de código abaixo utilizando o operador Destructuring!
+// const notas = [8.5, 6.3, 9.4];
+// const [nota1, nota2, nota3] = notas;
+// console.log(nota1, nota2, nota3);
+
+// //Exercício 6 -
+// const cientista = { primeiroNome: "Will", experiencia: 12 };
+// const { primeiroNome, experiencia } = cientista;
+// console.log(primeiroNome, experiencia);
+
+//Callback
+
+function esperar3s() {
+  setTimeout(() => {
+    console.log("3s depois");
+  }, 3000);
+}
+
+esperar3s();
