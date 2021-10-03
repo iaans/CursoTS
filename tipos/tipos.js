@@ -120,11 +120,11 @@
 //   },
 // };
 // produto.validarProduto();
-var altura = 12;
+let altura = 12;
 // altura = null;
-var alturaOpcional = 12;
+let alturaOpcional = 12;
 alturaOpcional = null;
-var contato1 = {
+const contato1 = {
     nome: "Ian Augusto",
     tel1: "41992486500",
     tel2: null,
@@ -132,18 +132,18 @@ var contato1 = {
 console.log(contato1.nome);
 console.log(contato1.tel1);
 console.log(contato1.tel2);
-var podeSerNulo = null; // any!
+let podeSerNulo = null; // any!
 podeSerNulo = 12;
 console.log(podeSerNulo);
 podeSerNulo = "abc";
 console.log(podeSerNulo);
-var contaBancaria = {
+let contaBancaria = {
     saldo: 3456,
-    depositar: function (valor) {
+    depositar(valor) {
         this.saldo += valor;
     },
 };
-var correntista = {
+let correntista = {
     nome: "Ana Silva",
     contaBancaria: contaBancaria,
     contatos: ["34567890", "98765432"],
