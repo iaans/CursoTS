@@ -134,4 +134,40 @@ console.log(f40.frear());
 console.log(f40.frear());
 console.log(f40.acelerar());
 console.log(f40.acelerar());
+//Getters & setters
+class Pessoa {
+    constructor() {
+        this._idade = 0;
+    }
+    get idade() {
+        return this._idade;
+    }
+    set idade(valor) {
+        if (valor >= 0 && valor <= 120) {
+            this._idade = valor;
+        }
+    }
+}
+const pessoa1 = new Pessoa();
+pessoa1.idade = 10;
+console.log(pessoa1.idade);
+pessoa1.idade = -3;
+console.log(pessoa1.idade);
+//Atributos e métodos estáticos
+class Matematica {
+    static areaCirc(raio) {
+        return this.PI * raio * raio;
+    }
+}
+Matematica.PI = 3.1416;
+// const m1 = new Matematica();
+// m1.PI = 4.2;
+// console.log(m1.areaCirc(4));
+console.log(Matematica.areaCirc(4));
+// Classe abstrata
+class Calculo {
+    constructor() {
+        this.resultado = 0;
+    }
+}
 //# sourceMappingURL=classes.js.map

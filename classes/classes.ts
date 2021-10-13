@@ -162,3 +162,50 @@ console.log(f40.frear());
 console.log(f40.frear());
 console.log(f40.acelerar());
 console.log(f40.acelerar());
+
+//Getters & setters
+
+class Pessoa {
+  private _idade: number = 0;
+
+  get idade(): number {
+    return this._idade;
+  }
+
+  set idade(valor: number) {
+    if (valor >= 0 && valor <= 120) {
+      this._idade = valor;
+    }
+  }
+}
+
+const pessoa1 = new Pessoa();
+
+pessoa1.idade = 10;
+
+console.log(pessoa1.idade);
+
+pessoa1.idade = -3;
+console.log(pessoa1.idade);
+
+//Atributos e métodos estáticos
+
+class Matematica {
+  static PI: number = 3.1416;
+
+  static areaCirc(raio: number): number {
+    return this.PI * raio * raio;
+  }
+}
+
+// const m1 = new Matematica();
+// m1.PI = 4.2;
+// console.log(m1.areaCirc(4));
+
+console.log(Matematica.areaCirc(4));
+
+// Classe abstrata
+
+abstract class Calculo {
+  private resultado: number = 0;
+}
