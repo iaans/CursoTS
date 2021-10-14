@@ -207,5 +207,63 @@ console.log(Matematica.areaCirc(4));
 // Classe abstrata
 
 abstract class Calculo {
-  private resultado: number = 0;
+  protected resultado: number = 0;
+
+  abstract executar(...numeros: number[]): void;
+
+  getResultado(): number {
+    return this.resultado;
+  }
 }
+class Soma extends Calculo {
+  executar(...numeros: number[]): void {
+    this.resultado = numeros.reduce((t, a) => t + a);
+  }
+}
+
+class Multiplicacao extends Calculo {
+  executar(...numeros: number[]): void {
+    this.resultado = numeros.reduce((t, a) => t * a);
+  }
+}
+
+let c1 = new Soma();
+c1.executar(2, 3, 4, 5);
+console.log(c1.getResultado);
+
+c1 = new Multiplicacao();
+c1.executar(2, 3, 4, 5);
+console.log(c1.getResultado);
+
+//Construtor Privado e Singlenton
+
+class Unico {
+  private static instance: Unico = new Unico();
+  private constructor() {}
+
+  static getInstance(): Unico {
+    return Unico.instance;
+  }
+
+  agora() {
+    return new Date();
+  }
+}
+
+//const errado = new Unico();
+console.log(Unico.getInstance().agora());
+
+// Somente leitura
+
+class Aviao {
+  public readonly modelo: string;
+
+  constructor(modelo: string, public readonly prefixo: string) {
+    this.modelo = modelo;
+  }
+}
+
+const turboHelice = new Aviao("Tu-114", "PT-ABC");
+// turboHelice.modelo = "DC-8";
+// turboHelice.prefixo = "PT-DEF";
+console.log(turboHelice);
