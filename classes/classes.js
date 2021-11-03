@@ -1,15 +1,11 @@
 "use strict";
-// class Data {
-//   //Público por padrão
-//   dia: number;
-//   public mes: number;
-//   ano: number;
-//   constructor(dia: number = 1, mes: number = 1, ano: number = 1970) {
-//     this.dia = dia;
-//     this.mes = mes;
-//     this.ano = ano;
-//   }
-// }
+class Data {
+    constructor(dia = 1, mes = 1, ano = 1970) {
+        this.dia = dia;
+        this.mes = mes;
+        this.ano = ano;
+    }
+}
 // const aniversario = new Data(3, 11, 2009);
 // aniversario.dia = 4;
 // console.log(aniversario.dia);
