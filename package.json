@@ -15,6 +15,7 @@
     "systemjs": "^0.21.6"
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.10",
     "@types/node": "^16.11.0"
   }
 }
